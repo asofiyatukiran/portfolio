@@ -1,13 +1,13 @@
+
+import './App.css'
 import React, { useState } from "react";
 import {
-  Github,
-  Linkedin,
-  Instagram,
   Mail,
   ArrowUpRight,
   Menu,
   X,
 } from "lucide-react";
+
 
 /*
   ============================================================
@@ -502,10 +502,16 @@ function ContactSection() {
         <Mail size={16} /> {CONTACT.email}
       </a>
 
-      <div className="flex gap-6" style={{ color: TOKENS.inkSoft }}>
-        <a href={CONTACT.github} aria-label="GitHub"><Github size={22} /></a>
-        <a href={CONTACT.linkedin} aria-label="LinkedIn"><Linkedin size={22} /></a>
-        <a href={CONTACT.instagram} aria-label="Instagram"><Instagram size={22} /></a>
+      <div className="flex gap-6" style={{ fontFamily: TOKENS.fontMono, fontSize: 13 }}>
+        <a href={CONTACT.github} className="flex items-center gap-1" style={{ color: TOKENS.ink }}>
+        GitHub <ArrowUpRight size={14} />
+        </a>
+        <a href={CONTACT.linkedin} className="flex items-center gap-1" style={{ color: TOKENS.ink }}>
+          LinkedIn <ArrowUpRight size={14} />
+        </a>
+        <a href={CONTACT.instagram} className="flex items-center gap-1" style={{ color: TOKENS.ink }}>
+          Instagram <ArrowUpRight size={14} />
+        </a>
       </div>
     </div>
   );
